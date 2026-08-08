@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --background: beige;
+  --text: black;
+  --font-main: "Sofia Sans";
+
+  /* Shutter */
+  --font-size-shutter : 24px;
+  --loading-bar-border-color : grey;
+  --loading-bar-color : black;
+}

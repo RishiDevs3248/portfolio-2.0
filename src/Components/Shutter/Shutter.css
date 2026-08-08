@@ -1,0 +1,94 @@
+.shutter-container {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 10;
+}
+
+.shutter-cenimatic-bg {
+  position: fixed;
+  width: 100vw;
+  height: 0;
+  background-color: black;
+  z-index: 3;
+  animation: shutter-cenimatic-bg 3s 2.25s linear forwards;
+}
+
+@keyframes shutter-cenimatic-bg {
+  0% {
+    height: 0;
+  }
+  40%{
+    height: 10vh;
+  }
+  60%{
+    height: 10vh;
+  }
+  100% {
+    height: 0vh;
+  }
+}
+
+.shutter-cenimatic-bg-top {
+  top: 0;
+}
+
+.shutter-cenimatic-bg-bottom {
+  bottom: 0;
+}
+
+@keyframes shutter-gate-cenimatic {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.shutter-gate {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-main);
+  font-size: var(--font-size-shutter);
+  opacity: 1;
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  animation: shutter-gate-cenimatic 1s 3.25s linear forwards;
+}
+
+.shutter-text {
+  margin-bottom: 8px;
+}
+
+.shutter-loading-bar {
+  width: 240px;
+  height: 4px;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  border: 0.8px solid var(--loading-bar-border-color);
+}
+
+@keyframes shutter-progress-bar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.shutter-progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: var(--loading-bar-color);
+  animation: shutter-progress-bar 2.25s linear forwards;
+}
