@@ -1,6 +1,20 @@
-.default{
-    height: 100vh;
-    width: 100vw;
-    background-color: plum;
-    z-index: 0;
+.home-container {
+  width: 100vw;
+  background-color: var(--background);
+  z-index: 0;
+  border-top:0.5px solid black;
+}
+
+.home-hero-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--background);
+  color: var(--text);
+  font-family: var(--font-main);
+  font-size: var(--font-size-shutter);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

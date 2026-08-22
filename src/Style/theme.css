@@ -5,13 +5,34 @@
   padding: 0;
 }
 
+/* 
+
+Text theme pallet :
+
+[ Focused / Heading ]       --->      #1C1815  (Deepest contrast, maximum impact)
+[ Unfocused ]               --->      #8C8275  (Pushed to background)
+[ Subheading ]              --->      #3D3730  (Slightly softer, anchors sections)
+[ Paragraph ]               --->      #4A433B  (Easy on the eyes for reading)
+
+*/
+
 :root {
-  --background: beige;
-  --text: black;
+  --background: #F5F0E5;
+
+  /* Text theme pallet */
+  --heading-text: #1C1815;
+  --unfocused-text: #8C8275;
+  --unfocused-text2: rgba(42,37,32,0.08);
+  --subheading-text: #3D3730;
+  --paragraph-text: #4A433B;
+
+
+
   --font-main: "Sofia Sans";
 
   /* Shutter */
-  --font-size-shutter : 24px;
+  --font-weight-shutter : 300;
+  --font-size-shutter : 20px;
   --loading-bar-border-color : grey;
   --loading-bar-color : black;
 }
