@@ -1,19 +1,13 @@
-@font-face {
-  font-family: "JetBrains Mono";
-  src: url("../../assets/fonts/JetBrainsMono-ExtraLight.ttf") format("woff2");
-  font-weight: 400;
-}
-
 .shutter-container {
   position: absolute;
   overflow: hidden;
   height: 100vh;
   width: 100vw;
   background-color: var(--background);
-  font-family: "JetBrains Mono";
+  font-family: var( --font-main);
   font-weight: var(--font-weight-shutter);
   font-size: var(--font-size-shutter);
-  z-index: 2;
+  z-index: 9;
 }
 
 .shutter-gate {

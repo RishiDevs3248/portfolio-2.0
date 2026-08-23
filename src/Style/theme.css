@@ -1,23 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Sofia+Sans:ital,wght@0,1..1000;1,1..1000&display=swap');
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../assets/fonts/JetBrainsMono-ExtraLight.ttf") format("woff2");
+  font-weight: 400;
+}
 
 *{
   margin: 0;
   padding: 0;
-}
-
-/* 
-
-Text theme pallet :
-
-[ Focused / Heading ]       --->      #1C1815  (Deepest contrast, maximum impact)
-[ Unfocused ]               --->      #8C8275  (Pushed to background)
-[ Subheading ]              --->      #3D3730  (Slightly softer, anchors sections)
-[ Paragraph ]               --->      #4A433B  (Easy on the eyes for reading)
-
-*/
+} 
 
 :root {
   --background: #F5F0E5;
+  --font-main: "JetBrains Mono";
 
   /* Text theme pallet */
   --heading-text: #1C1815;
@@ -26,13 +20,12 @@ Text theme pallet :
   --subheading-text: #3D3730;
   --paragraph-text: #4A433B;
 
-
-
-  --font-main: "Sofia Sans";
-
   /* Shutter */
   --font-weight-shutter : 300;
   --font-size-shutter : 20px;
   --loading-bar-border-color : grey;
   --loading-bar-color : black;
+
+  /* Nav Bar */
+  --nav-border : #3D3730;
 }
