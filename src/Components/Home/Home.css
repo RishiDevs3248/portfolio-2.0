@@ -1,20 +1,101 @@
 .home-container {
-  width: 100vw;
-  background-color: var(--background);
+  width: 100%;
   z-index: 0;
-  border-top:0.5px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .home-hero-container {
   height: 100vh;
-  width: 100vw;
-  background-color: var(--background);
-  color: var(--text);
-  font-family: var(--font-main);
-  font-size: var(--font-size-shutter);
+  width: 100%;
+  max-width: var(--max-width);
 
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.hero-left {
+  max-width: 20%;
+}
+
+.hero-left img {
+  max-width: 100%;
+  border-radius: 25px;
+}
+
+.hero-right {
+  width: 50%;
+}
+
+.name-container {
+  font-size: 24px;
+  padding-bottom: 16px;
+}
+
+.text-container-text1 {
+  padding-bottom: 8px;
+}
+
+.name-container span,
+.text-container-text span {
+  font-family: "JetBrains Mono reg";
+  font-weight: 400;
+}
+
+.exp-container {
+  width: 100%;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.top-border {
+  width: 100%;
+  max-width: var(--max-width);
+  border-top: 0.3px solid black;
+}
+
+.exp-box-container {
+  width: calc(100% - 32px);
+  padding: 40px 16px;
+  max-width: calc(var(--max-width) - 32px);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 16px;
+  padding-bottom: 40px;
+}
+
+.exp-button {
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 12px;
+  color: var(--unfocused-text);
+  cursor: pointer;
+}
+
+.exp {
+  width: 100%;
+}
+
+.skills-container-parent {
+  width: 100vw;
+  height: auto;
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-container {
+  max-width: var(--max-width);
+  width: 100%;
+  border-top: 1px solid black;
 }

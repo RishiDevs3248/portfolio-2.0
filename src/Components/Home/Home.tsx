@@ -1,13 +1,83 @@
+import { useState } from 'react'
 import './Home.css'
+import ExperienceCard from '../ExperienceCard/ExperienceCard';
 
 export default function Home() {
-  return (
-    <div className='home-container'>
 
-      <div className="home-hero-container">
-        Home
+  const year = new Date().getFullYear();
+  const bornYear = 2004;
+  const age = year - bornYear
+  const expObj = [
+    {
+      companyName: "Qualitia Software",
+      role: "Junior Software Engineer",
+      time: "13 Nov 2025 - Present",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
+    },
+    {
+      companyName: "Techspawn Solutions",
+      role: "ERP Developer Intern",
+      time: "4 Nov 2024 – 6 Feb 2025",
+      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
+    },
+  ]
+
+  const [isExpShow, setIsExpSet] = useState(true);
+
+  return (
+    <>
+      <div className='home-container'>
+        <div className="home-hero-container">
+          <div className="hero-left">
+            <img src="/images/Porfolio_profile_image.png" alt="Profile image" />
+          </div>
+
+          <div className="hero-right">
+            <div className='name-container'>Hi I am <span>Hrishikesh Alabnur</span></div>
+            <div className="text-container">
+              <div className="text-container-text text-container-text1"><span>{age} years old</span> from <span>Pune, India</span></div>
+              <div className="text-container-text text-container-text2">Working as <span>Junior Software Engineer</span> at Qualitia Software, <span>Full Stack Web Developer</span> by passion</div>
+            </div>
+          </div>
+
+        </div>
       </div>
 
-    </div>
+
+      <div className='exp-container'>
+        <div className="top-border"></div>
+        <div className="exp-box-container">
+          <div className="button-container">
+            <div className='exp-button' onClick={() => setIsExpSet(true)}>Experience</div>
+            <div className='exp-button' onClick={() => setIsExpSet(false)}>Projects</div>
+          </div>
+          {isExpShow && <div className='exp exp-container'>
+            {expObj.map((company) => {
+              return <ExperienceCard key={company.companyName + company.role} {...company} ></ExperienceCard>
+            })}
+          </div>}
+          {!isExpShow && <div className='exp prj-container'>Prj</div>}
+        </div>
+      </div>
+
+
+      <div className="skills-container-parent">
+        {/* <div className="top-border"></div> */}
+        {/* <div className="skills-container">
+          <div className="skills-heading">Skills</div>
+          <div className="skill-container">
+            <div className="skill">React</div>
+          </div>
+        </div> */}
+      </div>
+
+
+      <div className="contacts-container">
+        <div className="contact-heading">Contact</div>
+        <div className="contact-container">
+          <div className="contact">React</div>
+        </div>
+      </div>
+    </>
   )
 }

@@ -4,28 +4,48 @@
   font-weight: 400;
 }
 
-*{
+@font-face {
+  font-family: "JetBrains Mono reg";
+  src: url("../assets/fonts/JetBrainsMono-SemiBold.ttf") format("woff2");
+  font-weight: 400;
+}
+
+* {
   margin: 0;
   padding: 0;
-} 
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size-home);
+  background-color: var(--background);
+  color: var(--text);
+  padding: 0px 24px;
+}
 
 :root {
-  --background: #F5F0E5;
+  /* General */
+  --background: #f5f0e5;
   --font-main: "JetBrains Mono";
+  --max-width: 1024px;
 
   /* Text theme pallet */
-  --heading-text: #1C1815;
-  --unfocused-text: #8C8275;
-  --unfocused-text2: rgba(42,37,32,0.08);
-  --subheading-text: #3D3730;
-  --paragraph-text: #4A433B;
+  --heading-text: #1c1815;
+  --unfocused-text: #8c8275;
+  --unfocused-text2: rgba(42, 37, 32, 0.08);
+  --subheading-text: #3d3730;
+  --paragraph-text: #4a433b;
 
   /* Shutter */
-  --font-weight-shutter : 300;
-  --font-size-shutter : 20px;
-  --loading-bar-border-color : grey;
-  --loading-bar-color : black;
+  --font-weight-shutter: 300;
+  --font-size-shutter: 20px;
+  --loading-bar-border-color: grey;
+  --loading-bar-color: black;
 
   /* Nav Bar */
-  --nav-border : #3D3730;
+  --nav-border: #3d3730;
+
+  /* Home */
+  --font-size-home: 16px;
 }
