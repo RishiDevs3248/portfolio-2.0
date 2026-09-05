@@ -116,9 +116,9 @@ export default function Home() {
           <div className="contact-container">
             <div className="contact">Mobile : <span>9307076748</span></div>
             <div className="contact">Email : <span>hrishikesh3248@gmail.com</span></div>
-            <div className="contact"> <span><a href='https://www.linkedin.com/in/hrishikesh-alabnur-407269233/'>Linkedin</a></span></div>
-            <div className="contact"><span><a href='https://github.com/RishiDevs3248'>Github</a></span></div>
-            <div className="contact"> <span><a href='https://leetcode.com/u/Hrishikesh_3248/'>LeetCode</a></span></div>
+            <div className="contact">Visit : <span><a href='https://www.linkedin.com/in/hrishikesh-alabnur-407269233/'>Linkedin</a></span></div>
+            <div className="contact">Visit : <span><a href='https://github.com/RishiDevs3248'>Github</a></span></div>
+            <div className="contact">Visit : <span><a href='https://leetcode.com/u/Hrishikesh_3248/'>LeetCode</a></span></div>
           </div>
         </div>
       </div>

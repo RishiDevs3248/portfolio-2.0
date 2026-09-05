@@ -1,50 +1,91 @@
 @font-face {
-  font-family: "JetBrains Mono";
-  src: url("../assets/fonts/JetBrainsMono-ExtraLight.ttf") format("woff2");
-  font-weight: 400;
+    font-family: "JetBrains Mono";
+    src: url("../assets/fonts/JetBrainsMono-ExtraLight.ttf") format("truetype");
+    font-weight: 400;
 }
 
 @font-face {
-  font-family: "JetBrains Mono reg";
-  src: url("../assets/fonts/JetBrainsMono-SemiBold.ttf") format("woff2");
-  font-weight: 400;
+    font-family: "JetBrains Mono reg";
+    src: url("../assets/fonts/JetBrainsMono-SemiBold.ttf") format("truetype");
+    font-weight: 400;
 }
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-main);
-  font-size: var(--font-size-home);
-  background-color: var(--background);
-  color: var(--text);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
-  /* General */
-  --background: #f5f0e5;
-  --font-main: "JetBrains Mono";
-  --max-width: 1024px;
+    --background: #f5f0e5;
 
-  /* Text theme pallet */
-  --heading-text: #1c1815;
-  --unfocused-text: #8c8275;
-  --unfocused-text2: rgba(42, 37, 32, 0.08);
-  --subheading-text: #3d3730;
-  --paragraph-text: #4a433b;
+    --font-main: "JetBrains Mono";
+    --font-main-reg: "JetBrains Mono reg";
 
-  /* Shutter */
-  --font-weight-shutter: 300;
-  --font-size-shutter: 20px;
-  --loading-bar-border-color: grey;
-  --loading-bar-color: black;
+    --max-width: 1024px;
 
-  /* Nav Bar */
-  --nav-border: #3d3730;
+    --heading-text: #1c1815;
+    --unfocused-text: #8c8275;
+    --unfocused-text2: rgba(42, 37, 32, 0.08);
+    --subheading-text: #3d3730;
+    --paragraph-text: #4a433b;
 
-  /* Home */
-  --font-size-home: 16px;
+    --font-weight-shutter: 300;
+
+    --font-size-home: clamp(13px, 1.5vw, 16px);
+    --font-size-heading: clamp(18px, 2.2vw, 24px);
+    --font-size-company: clamp(15px, 1.8vw, 20px);
+    --font-size-subheading: clamp(13px, 1.5vw, 16px);
+    --font-size-paragraph: clamp(12px, 1.3vw, 14px);
+    --font-size-shutter: clamp(15px, 2vw, 20px);
+
+    --loading-bar-border-color: grey;
+    --loading-bar-color: black;
+
+    --nav-border: #3d3730;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    font-family: var(--font-main);
+    font-size: var(--font-size-home);
+    background-color: var(--background);
+    color: var(--heading-text);
+    overflow-x: hidden;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --max-width: 900px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    :root {
+        --max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --max-width: 100%;
+    }
 }

@@ -14,7 +14,8 @@ export default function ExperienceCard(props: ExperienceCardProps) {
     const [showDesc, setShowDesc] = useState(false);
 
     return (
-        <div className='exp-card-container' onClick={() => { setShowDesc(!showDesc) }}>
+        <div className='exp-card-container' onMouseEnter={() => { setShowDesc(true) }}
+            onMouseLeave={() => { setShowDesc(false) }}>
             <div className="side-line"></div>
             <div className="main-card">
                 <div className="always-display" >

@@ -1,52 +1,102 @@
 .exp-card-container {
-  padding: 0 10%;
-  width: 100%;
-  max-width: var(--max-width);
-  height: fit-content;
-  display: flex;
-  flex-direction: row;
-  align-items: stretch;
-  padding-bottom:16px ;
-  margin-bottom: 20xpx ;
-
+    padding: 0 10%;
+    width: 100%;
+    max-width: var(--max-width);
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
-.main-card{
-        width: 100%;
+.main-card {
+    width: 100%;
     max-width: var(--max-width);
 }
 
 .side-line {
-  width: 1px;
-  margin-right: 20px;
-  background-color: var(--loading-bar-border-color);
+    width: 1px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    background-color: var(--loading-bar-border-color);
 }
 
-.exp-top{
+.exp-top {
     width: 100%;
     max-width: var(--max-width);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 16px;
 }
 
 .companyName {
-  font-size: 20px;
-  font-family: "JetBrains Mono reg";
-  font-weight: 400;
-  margin-bottom: 8px;
-  color: var(--heading-text);
+    font-size: var(--font-size-company);
+    font-family: var(--font-main-reg);
+    font-weight: 400;
+    margin-bottom: 8px;
+    color: var(--heading-text);
 }
 
 .role,
 .time {
-    font-size: 16px;
+    font-size: var(--font-size-subheading);
     color: var(--subheading-text);
 }
 
-.card-desc{
+.card-desc {
     padding-top: 8px;
     text-align: justify;
-    font-size: 14px;
+    font-size: var(--font-size-paragraph);
     color: var(--paragraph-text);
+    line-height: 1.6;
+}
+
+@media screen and (max-width: 1024px) {
+    .exp-card-container {
+        padding: 0 6%;
+        padding-bottom: 16px;
+        margin-bottom: 20px;
+    }
+
+    .side-line {
+        margin-right: 16px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .exp-card-container {
+        padding: 0 4%;
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+    }
+
+    .side-line {
+        margin-right: 12px;
+    }
+
+    .exp-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .card-desc {
+        text-align: left;
+        line-height: 1.5;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .exp-card-container {
+        padding: 0 3%;
+        padding-bottom: 12px;
+        margin-bottom: 14px;
+    }
+
+    .side-line {
+        margin-right: 10px;
+    }
 }

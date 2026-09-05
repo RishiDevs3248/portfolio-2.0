@@ -1,153 +1,357 @@
-.homePageParent{
-  padding: 0px 24px;
+.homePageParent {
+    padding: 0 24px;
+    width: 100%;
+    z-index: 0;
 }
 
 .home-container {
-  width: 100%;
-  z-index: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .home-hero-container {
-  height: 100vh;
-  width: 100%;
-  max-width: var(--max-width);
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 40px;
 }
 
 .hero-left {
-  max-width: 20%;
+    width: 20%;
+    max-width: 250px;
+    flex-shrink: 0;
 }
 
 .hero-left img {
-  max-width: 100%;
-  border-radius: 25px;
+    width: 100%;
+    border-radius: 25px;
 }
 
 .hero-right {
-  width: 50%;
+    width: 50%;
+    max-width: 550px;
 }
 
 .name-container {
-  font-size: 24px;
-  padding-bottom: 16px;
+    font-size: var(--font-size-heading);
+    padding-bottom: 16px;
 }
 
 .text-container-text1 {
-  padding-bottom: 8px;
+    padding-bottom: 8px;
 }
 
 .name-container span,
 .text-container-text span {
-  font-family: "JetBrains Mono reg";
-  font-weight: 400;
+    font-family: var(--font-main-reg);
+    font-weight: 400;
 }
 
 .exp-container {
-  width: 100%;
-  z-index: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .prj-container {
-  width: 100%;
-  z-index: 0;
-  columns: 2;
+    width: 100%;
+    z-index: 0;
+    columns: 2;
+    column-gap: 16px;
 }
 
 .top-border {
-  width: 100%;
-  max-width: var(--max-width);
-  border-top: 0.3px solid black;
+    width: 100%;
+    max-width: var(--max-width);
+    border-top: 0.3px solid black;
 }
 
 .exp-box-container {
-  width: calc(100% - 32px);
-  padding: 16px 16px;
-  max-width: calc(var(--max-width) - 32px);
+    width: calc(100% - 32px);
+    padding: 16px;
+    max-width: calc(var(--max-width) - 32px);
 }
 
 .exp-button {
-  padding: 8px 16px;
-  margin-bottom: 16px;
-  color: var(--heading-text);
-  font-family: "JetBrains Mono reg";
-  font-size: 24px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    color: var(--heading-text);
+    font-family: var(--font-main-reg);
+    font-size: var(--font-size-heading);
 }
 
 .exp {
-  width: 100%;
+    width: 100%;
 }
 
 .skills-container-parent {
-  width: 100%;
-  z-index: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .skills-container {
-  max-width: var(--max-width);
-  width: 100%;
-  padding: 16px;
+    max-width: var(--max-width);
+    width: 100%;
+    padding: 16px;
 }
 
 .skills-heading {
-  padding: 8px 16px;
-  margin-bottom: 16px;
-  color: var(--heading-text);
-  font-family: "JetBrains Mono reg";
-  font-size: 24px;
+    padding: 8px 16px;
+    margin-bottom: 16px;
+    color: var(--heading-text);
+    font-family: var(--font-main-reg);
+    font-size: var(--font-size-heading);
 }
 
 .skill-container {
-  display: flex;
-  gap: 8px;
-  flex: wrap;
-  height: auto;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    height: auto;
 }
 
 .skill {
-  padding: 8px;
-  height: 32px;
-  width: fit-content;
-  border: 1px solid black;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    padding: 8px;
+    min-height: 32px;
+    height: auto;
+    width: fit-content;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size-paragraph);
 }
 
 .contacts-container-parent {
-  width: 100%;
-  z-index: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    width: 100%;
+    z-index: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .contact-container {
-  max-width: var(--max-width);
-  width: 100%;
-  padding: 16px;
+    max-width: var(--max-width);
+    width: 100%;
+    padding: 40px 16px 60px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
 .contact-heading {
-  padding: 8px 16px;
-  margin-bottom: 16px;
-  color: var(--heading-text);
-  font-family: "JetBrains Mono reg";
-  font-size: 24px;
+    padding: 8px 12px;
+    color: var(--heading-text);
+    font-family: var(--font-main-reg);
+    font-size: var(--font-size-heading);
+}
+
+.contact-container > .contact-container {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+}
+
+.contact {
+    min-height: 75px;
+    padding: 14px 16px;
+    border: 1px solid var(--nav-border);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    color: var(--unfocused-text);
+    font-size: var(--font-size-paragraph);
+}
+
+.contact span {
+    font-family: var(--font-main-reg);
+    color: var(--heading-text);
+}
+
+.contact a {
+    color: var(--heading-text);
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1024px) {
+    .homePageParent {
+        padding: 0 16px;
+    }
+
+    .home-hero-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 32px;
+        text-align: center;
+    }
+
+    .hero-left {
+        width: 30%;
+        max-width: 250px;
+    }
+
+    .hero-right {
+        width: 80%;
+        max-width: 650px;
+    }
+
+    .prj-container {
+        columns: 1;
+    }
+
+    .contact-container {
+        padding: 32px 16px 48px;
+    }
+
+    .contact-heading {
+        padding: 8px 12px;
+    }
+
+    .contact-container > .contact-container {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .contact {
+        min-height: 75px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .homePageParent {
+        padding: 0 12px;
+    }
+
+    .home-container {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    .home-hero-container {
+        min-height: calc(100vh - 56px);
+        gap: 24px;
+        padding: 40px 0;
+    }
+
+    .hero-left {
+        width: 45%;
+        max-width: 200px;
+    }
+
+    .hero-left img {
+        border-radius: 20px;
+    }
+
+    .hero-right {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .name-container {
+        padding-bottom: 12px;
+    }
+
+    .exp-box-container {
+        width: 100%;
+        padding: 16px 8px;
+    }
+
+    .skills-container {
+        padding: 16px 8px;
+    }
+
+    .skills-heading,
+    .exp-button {
+        padding: 8px;
+    }
+
+    .contact-container {
+        padding: 28px 8px 40px;
+    }
+
+    .contact-heading {
+        padding: 8px;
+    }
+
+    .contact-container > .contact-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .contact {
+        min-height: 65px;
+        padding: 12px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .homePageParent {
+        padding: 0 8px;
+    }
+
+    .home-hero-container {
+        gap: 20px;
+        padding: 32px 0;
+    }
+
+    .hero-left {
+        width: 50%;
+        max-width: 180px;
+    }
+
+    .hero-right {
+        width: 100%;
+    }
+
+    .exp-box-container {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .skills-container {
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .contact-container {
+        padding: 24px 4px 32px;
+    }
+
+    .contact-heading {
+        padding: 8px 4px;
+    }
+
+    .contact-container > .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact {
+        min-height: 60px;
+    }
 }

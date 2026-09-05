@@ -1,56 +1,78 @@
 .shutter-container {
-  position: absolute;
-  overflow: hidden;
-  height: 100vh;
-  width: 100vw;
-  background-color: var(--background);
-  font-family: var( --font-main);
-  font-weight: var(--font-weight-shutter);
-  font-size: var(--font-size-shutter);
-  z-index: 9;
+    position: absolute;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+    background-color: var(--background);
+    font-family: var(--font-main);
+    font-weight: var(--font-weight-shutter);
+    font-size: var(--font-size-shutter);
+    z-index: 9;
 }
 
 .shutter-gate {
-  height: 70%;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .shutter-text {
-  color: var(--focused-text);
+    color: var(--heading-text);
+    text-align: center;
 }
 
 .shutter-loading-bar {
-  position: relative;
-  width: 50%;
+    position: relative;
+    width: 50%;
+    max-width: 600px;
 }
 
 .shutter-progress-bar {
-  width: 100%;
-  height: 1px;
-  background-color: rgba(42, 37, 32, 0.08);
-  border-radius: 3px;
-  margin: 16px 0;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(42, 37, 32, 0.08);
+    border-radius: 3px;
+    margin: 16px 0;
 }
 
 .shutter-progress-bar-focus {
-  width: 0%;
-  height: 1px;
-  background-color: var(--subheading-text);
+    width: 0%;
+    height: 1px;
+    background-color: var(--subheading-text);
 }
 
 .shutter-progress-number {
-  position: absolute;
-  right: 0px;
-  font-size: 12px;
-  color: var(--unfocused-text);
+    position: absolute;
+    right: 0;
+    font-size: var(--font-size-paragraph);
+    color: var(--unfocused-text);
 }
 
 .shutter-cenimatic-bg {
-  height: 15%;
-  width: 100vw;
-  background-color: #111;
+    height: 15%;
+    width: 100%;
+    background-color: #111;
+}
+
+@media screen and (max-width: 600px) {
+    .shutter-loading-bar {
+        width: 70%;
+    }
+
+    .shutter-progress-bar {
+        margin: 12px 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .shutter-loading-bar {
+        width: 80%;
+    }
+
+    .shutter-progress-bar {
+        margin: 10px 0;
+    }
 }
