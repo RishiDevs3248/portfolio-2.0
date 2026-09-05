@@ -1,0 +1,31 @@
+.prj-card-container {
+  padding:8px;
+  width: 100%;
+  max-width: var(--max-width);
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  margin-bottom: 20xpx;
+  border: 1px solid black;
+  border-radius: 24px;
+}
+
+.prjImage {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.prjName {
+}
+
+.prjDesc {
+}
+
+.skilssContainer {
+}
+
+.skill {
+}

@@ -53,6 +53,18 @@
   justify-content: center;
   align-items: center;
 }
+
+.prj-container {
+  width: 100%;
+  z-index: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:16px;
+}
+
 .top-border {
   width: 100%;
   max-width: var(--max-width);
@@ -61,24 +73,15 @@
 
 .exp-box-container {
   width: calc(100% - 32px);
-  padding: 40px 16px;
+  padding: 16px 16px;
   max-width: calc(var(--max-width) - 32px);
-}
-
-.button-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 16px;
-  padding-bottom: 40px;
 }
 
 .exp-button {
   padding: 8px 16px;
-  border: 1px solid black;
+  margin-bottom: 16px;
   border-radius: 12px;
-  color: var(--unfocused-text);
-  cursor: pointer;
+  color: var(--heading-text);
 }
 
 .exp {

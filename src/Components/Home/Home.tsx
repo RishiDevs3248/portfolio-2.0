@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './Home.css'
 import ExperienceCard from '../ExperienceCard/ExperienceCard';
+import ProjectCard from '../ProjectCard/ProjectCard';
 
 export default function Home() {
 
@@ -21,8 +22,32 @@ export default function Home() {
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
     },
   ]
-
-  const [isExpShow, setIsExpSet] = useState(true);
+  const prjObj = [
+    {
+      image: "./images/Porfolio_profile_image.png",
+      prjName: "Prj name",
+      description: "description description description description description description",
+      skill: ["React.js", "Node.js", "Express.js"]
+    },
+    {
+      image: "./images/Porfolio_profile_image.png",
+      prjName: "Prj name",
+      description: "description description description description description description",
+      skill: ["React.js", "Node.js", "Express.js"]
+    },
+    {
+      image: "./images/Porfolio_profile_image.png",
+      prjName: "Prj name",
+      description: "description description description description description description",
+      skill: ["React.js", "Node.js", "Express.js"]
+    },
+    {
+      image: "./images/Porfolio_profile_image.png",
+      prjName: "Prj name",
+      description: "description description description description description description",
+      skill: ["React.js", "Node.js", "Express.js"]
+    },
+  ]
 
   return (
     <>
@@ -47,18 +72,28 @@ export default function Home() {
       <div className='exp-container'>
         <div className="top-border"></div>
         <div className="exp-box-container">
-          <div className="button-container">
-            <div className='exp-button' onClick={() => setIsExpSet(true)}>Experience</div>
-            <div className='exp-button' onClick={() => setIsExpSet(false)}>Projects</div>
-          </div>
-          {isExpShow && <div className='exp exp-container'>
+          <div className='exp-button'>Experience</div>
+
+          <div className='exp exp-container'>
             {expObj.map((company) => {
               return <ExperienceCard key={company.companyName + company.role} {...company} ></ExperienceCard>
             })}
-          </div>}
-          {!isExpShow && <div className='exp prj-container'>Prj</div>}
+          </div>
         </div>
       </div>
+
+      <div className='exp-container'>
+        <div className="top-border"></div>
+        <div className="exp-box-container">
+          <div className='exp-button'>Projects</div>
+          <div className='exp prj-container'>
+            {prjObj.map((prj) => {
+              return <ProjectCard key={prj.prjName} {...prj} ></ProjectCard>
+            })}
+          </div>
+        </div>
+      </div>
+
 
 
       <div className="skills-container-parent">
@@ -73,10 +108,10 @@ export default function Home() {
 
 
       <div className="contacts-container">
-        <div className="contact-heading">Contact</div>
+        {/* <div className="contact-heading">Contact</div>
         <div className="contact-container">
           <div className="contact">React</div>
-        </div>
+        </div> */}
       </div>
     </>
   )
