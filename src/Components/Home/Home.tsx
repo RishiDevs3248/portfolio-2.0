@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './Home.css'
 import ExperienceCard from '../ExperienceCard/ExperienceCard';
 import ProjectCard from '../ProjectCard/ProjectCard';
@@ -27,7 +26,7 @@ export default function Home() {
       image: "./images/Porfolio_profile_image.png",
       prjName: "Prj name",
       description: "description description description description description description",
-      skill: ["React.js", "Node.js", "Express.js"]
+      skill: ["React.js", "Node.js", "Express.js", "React.js", "Node.js", "Express.js", "React.js", "Node.js", "Express.js"]
     },
     {
       image: "./images/Porfolio_profile_image.png",
@@ -48,9 +47,10 @@ export default function Home() {
       skill: ["React.js", "Node.js", "Express.js"]
     },
   ]
+  const skillsList: Array<string> = ["React.js", "Node.js", "Express.js", "React.js", "Node.js", "Express.js", "React.js", "Node.js", "Express.js"];
 
   return (
-    <>
+    <div className='homePageParent'>
       <div className='home-container'>
         <div className="home-hero-container">
           <div className="hero-left">
@@ -58,7 +58,7 @@ export default function Home() {
           </div>
 
           <div className="hero-right">
-            <div className='name-container'>Hi I am <span>Hrishikesh Alabnur</span></div>
+            <div className='name-container'>Hi, I am <span>Hrishikesh Alabnur</span></div>
             <div className="text-container">
               <div className="text-container-text text-container-text1"><span>{age} years old</span> from <span>Pune, India</span></div>
               <div className="text-container-text text-container-text2">Working as <span>Junior Software Engineer</span> at Qualitia Software, <span>Full Stack Web Developer</span> by passion</div>
@@ -97,22 +97,31 @@ export default function Home() {
 
 
       <div className="skills-container-parent">
-        {/* <div className="top-border"></div> */}
-        {/* <div className="skills-container">
+        <div className="top-border"></div>
+        <div className="skills-container">
           <div className="skills-heading">Skills</div>
           <div className="skill-container">
-            <div className="skill">React</div>
+            {skillsList.map((skill, idx) => {
+              return <span className='skill' key={idx}>{skill}</span>
+            })}
           </div>
-        </div> */}
+        </div>
       </div>
 
 
-      <div className="contacts-container">
-        {/* <div className="contact-heading">Contact</div>
+      <div className="contacts-container-parent">
+        <div className="top-border"></div>
         <div className="contact-container">
-          <div className="contact">React</div>
-        </div> */}
+          <div className="contact-heading">Contact</div>
+          <div className="contact-container">
+            <div className="contact">Mobile : <span>9307076748</span></div>
+            <div className="contact">Email : <span>hrishikesh3248@gmail.com</span></div>
+            <div className="contact"> <span><a href='https://www.linkedin.com/in/hrishikesh-alabnur-407269233/'>Linkedin</a></span></div>
+            <div className="contact"><span><a href='https://github.com/RishiDevs3248'>Github</a></span></div>
+            <div className="contact"> <span><a href='https://leetcode.com/u/Hrishikesh_3248/'>LeetCode</a></span></div>
+          </div>
+        </div>
       </div>
-    </>
+    </div>
   )
 }

@@ -1,5 +1,5 @@
 .prj-card-container {
-  padding:8px;
+  padding: 8px;
   width: 100%;
   max-width: var(--max-width);
   height: fit-content;
@@ -7,25 +7,45 @@
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  margin-bottom: 20xpx;
+  margin-bottom: 20px;
   border: 1px solid black;
   border-radius: 24px;
+  break-inside: avoid;
 }
 
 .prjImage {
   width: 100%;
   height: auto;
   border-radius: 16px;
+  margin-bottom: 8px;
 }
 
 .prjName {
+    font-family: "JetBrains Mono reg";
+    color: var(--heading-text);
+    margin-bottom: 8px;
 }
 
 .prjDesc {
+    text-align: justify;
+    margin-bottom: 8px;
+    color: var(--paragraph-text);
 }
 
 .skilssContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    font-family: "JetBrains Mono reg";
 }
 
 .skill {
+    padding : 8px;
+    height: 32px;
+    border: 1px solid black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
 }

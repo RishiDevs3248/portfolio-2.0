@@ -40,9 +40,19 @@ export default function Nav() {
     return (
         <div id='nav-main-container'>
             <div id='nav-container'>
-                <div className="nav-button">Home</div>
-                <div className="nav-button">Contact</div>
-                <div className="nav-button">Resume</div>
+                <div className="nav-button" onClick={() => {
+                    document
+                        .querySelector(".homePageParent")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                }}>Home</div>
+                <div className="nav-button" onClick={() => {
+                    document
+                        .querySelector(".contacts-container-parent")
+                        ?.scrollIntoView({ behavior: "smooth" });
+                }}>Contact</div>
+                <div className="nav-button" onClick={() => {
+                    window.open("./Resume/Hrishikesh_Alabnur_1YO_exp.pdf", "_blank");
+                }}>Resume</div>
             </div>
         </div>
     )

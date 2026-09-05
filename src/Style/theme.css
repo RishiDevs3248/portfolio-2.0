@@ -21,7 +21,6 @@ body {
   font-size: var(--font-size-home);
   background-color: var(--background);
   color: var(--text);
-  padding: 0px 24px;
 }
 
 :root {

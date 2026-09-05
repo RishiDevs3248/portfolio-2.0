@@ -9,6 +9,10 @@ export default function Shutter() {
     const [currentText, setCurrentText] = useState(sutterSentanceArray[0])
 
     useEffect(() => {
+        document.body.style.overflow = "hidden";
+    }, []);
+
+    useEffect(() => {
         let itrator = 0;
         const interval = setInterval(() => {
             itrator++;
@@ -88,7 +92,10 @@ export default function Shutter() {
             }, "cinematic-off");
 
         tl.set(".shutter-container", {
-            display: "none"
+            display: "none",
+            onComplete: () => {
+                document.body.style.overflow = "";
+            }
         });
 
     });

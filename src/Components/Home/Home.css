@@ -1,3 +1,7 @@
+.homePageParent{
+  padding: 0px 24px;
+}
+
 .home-container {
   width: 100%;
   z-index: 0;
@@ -57,12 +61,7 @@
 .prj-container {
   width: 100%;
   z-index: 0;
-  display: grid;
-  grid-template-columns: auto auto;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap:16px;
+  columns: 2;
 }
 
 .top-border {
@@ -80,8 +79,9 @@
 .exp-button {
   padding: 8px 16px;
   margin-bottom: 16px;
-  border-radius: 12px;
   color: var(--heading-text);
+  font-family: "JetBrains Mono reg";
+  font-size: 24px;
 }
 
 .exp {
@@ -89,10 +89,10 @@
 }
 
 .skills-container-parent {
-  width: 100vw;
-  height: auto;
+  width: 100%;
   z-index: 0;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -100,5 +100,54 @@
 .skills-container {
   max-width: var(--max-width);
   width: 100%;
-  border-top: 1px solid black;
+  padding: 16px;
+}
+
+.skills-heading {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  color: var(--heading-text);
+  font-family: "JetBrains Mono reg";
+  font-size: 24px;
+}
+
+.skill-container {
+  display: flex;
+  gap: 8px;
+  flex: wrap;
+  height: auto;
+}
+
+.skill {
+  padding: 8px;
+  height: 32px;
+  width: fit-content;
+  border: 1px solid black;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contacts-container-parent {
+  width: 100%;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-container {
+  max-width: var(--max-width);
+  width: 100%;
+  padding: 16px;
+}
+
+.contact-heading {
+  padding: 8px 16px;
+  margin-bottom: 16px;
+  color: var(--heading-text);
+  font-family: "JetBrains Mono reg";
+  font-size: 24px;
 }

@@ -17,7 +17,7 @@ export default function ProjectCard(props: projectType) {
             <div className='prjDesc'>{props.description}</div>
             <div className='skilssContainer'>
                 {props.skill.map((skill, idx)=>{
-                    return <div className='skill' key={idx}>{skill}</div>
+                    return <span className='skill' key={idx}>{skill}</span>
                 })}
             </div>
         </div>
