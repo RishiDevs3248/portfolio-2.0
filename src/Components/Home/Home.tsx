@@ -1,12 +1,19 @@
 import './Home.css'
 import ExperienceCard from '../ExperienceCard/ExperienceCard';
 import ProjectCard from '../ProjectCard/ProjectCard';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
+
 
 export default function Home() {
 
   const year = new Date().getFullYear();
   const bornYear = 2004;
   const age = year - bornYear
+
   const expObj = [
     {
       companyName: "Qualitia Software",
@@ -21,6 +28,7 @@ export default function Home() {
       desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
     },
   ]
+
   const prjObj = [
     {
       image: "./images/Porfolio_profile_image.png",
@@ -47,7 +55,67 @@ export default function Home() {
       skill: ["React.js", "Node.js", "Express.js"]
     },
   ]
+
   const skillsList: Array<string> = ["React.js", "Node.js", "Express.js", "React.js", "Node.js", "Express.js", "React.js", "Node.js", "Express.js"];
+
+  useGSAP(() => {
+    const tl = gsap.timeline();
+
+
+    tl.from(".name-container", {
+      y: 10,
+      opacity: 0,
+      duration: 0.3,
+      stagget: 0.2,
+      delay: 4.5
+    }, "start")
+
+    tl.from(".hero-left", {
+      opacity: 0,
+      duration: 0.3,
+      delay: 4.5
+    }, "start")
+
+      .from(".text-container-text1", {
+        y: 10,
+        opacity: 0,
+        duration: 0.3,
+        stagget: 0.2
+      })
+
+      .from(".text-container-text2", {
+        y: 10,
+        opacity: 0,
+        duration: 0.3,
+        stagget: 0.2
+      })
+
+    gsap.from(".skills-container-parent .skill", {
+      y: 15,
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.06,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".skills-container-parent",
+        start: "top 80%",
+      }
+    })
+
+    gsap.from(".contacts-container-parent .contact", {
+      y: 15,
+      opacity: 0,
+      duration: 0.5,
+      stagger: 0.08,
+      ease: "power2.out",
+      scrollTrigger: {
+        trigger: ".contacts-container-parent",
+        start: "top 75%",
+      }
+    })
+
+  })
+
 
   return (
     <div className='homePageParent'>
@@ -87,8 +155,8 @@ export default function Home() {
         <div className="exp-box-container">
           <div className='exp-button'>Projects</div>
           <div className='exp prj-container'>
-            {prjObj.map((prj) => {
-              return <ProjectCard key={prj.prjName} {...prj} ></ProjectCard>
+            {prjObj.map((prj, idx) => {
+              return <ProjectCard key={idx} {...prj} ></ProjectCard>
             })}
           </div>
         </div>
@@ -116,9 +184,9 @@ export default function Home() {
           <div className="contact-container">
             <div className="contact">Mobile : <span>9307076748</span></div>
             <div className="contact">Email : <span>hrishikesh3248@gmail.com</span></div>
-            <div className="contact">Visit : <span><a href='https://www.linkedin.com/in/hrishikesh-alabnur-407269233/'>Linkedin</a></span></div>
-            <div className="contact">Visit : <span><a href='https://github.com/RishiDevs3248'>Github</a></span></div>
-            <div className="contact">Visit : <span><a href='https://leetcode.com/u/Hrishikesh_3248/'>LeetCode</a></span></div>
+            <div className="contact">Visit : <span><a target='_blank' href='https://www.linkedin.com/in/hrishikesh-alabnur-407269233/'>Linkedin</a></span></div>
+            <div className="contact">Visit : <span><a target='_blank' href='https://github.com/RishiDevs3248'>Github</a></span></div>
+            <div className="contact">Visit : <span><a target='_blank' href='https://leetcode.com/u/Hrishikesh_3248/'>LeetCode</a></span></div>
           </div>
         </div>
       </div>

@@ -16,6 +16,10 @@
     box-sizing: border-box;
 }
 
+body::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Edge */
+}
+
 :root {
     --background: #f5f0e5;
 
