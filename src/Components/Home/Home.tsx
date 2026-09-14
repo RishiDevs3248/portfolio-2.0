@@ -67,13 +67,11 @@ export default function Home() {
       opacity: 0,
       duration: 0.3,
       stagget: 0.2,
-      delay: 4.5
     }, "start")
 
     tl.from(".hero-left", {
       opacity: 0,
       duration: 0.3,
-      delay: 4.5
     }, "start")
 
       .from(".text-container-text1", {

@@ -23,7 +23,7 @@ export default function ProjectCard(props: projectType) {
 
         if (!card) return
 
-        const skills = card.querySelectorAll(".skill")
+        const skills = card.querySelectorAll(".card_skill")
 
         gsap.from(skills, {
             y: 10,
@@ -49,7 +49,7 @@ export default function ProjectCard(props: projectType) {
 
             <div className='skilssContainer'>
                 {props.skill.map((skill, idx) => {
-                    return <span className='skill' key={idx}>{skill}</span>
+                    return <span className='card_skill' key={idx}>{skill}</span>
                 })}
             </div>
         </div>

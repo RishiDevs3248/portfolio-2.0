@@ -42,14 +42,14 @@
     font-family: var(--font-main-reg);
 }
 
-.skill {
+.card_skill {
     padding: 8px;
     min-height: 32px;
     height: auto;
     width: fit-content;
     font-size: var(--font-size-paragraph);
     border: 1px solid black;
-    border-radius: 8px;
+    border-radius: 16px;
     display: flex;
     align-items: center;
     justify-content: center;

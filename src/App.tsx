@@ -1,7 +1,6 @@
 import './App.css'
 import Home from './Components/Home/Home'
 import Nav from './Components/Nav/Nav'
-import Shutter from './Components/Shutter/Shutter'
 import { useEffect } from 'react'
 import Lenis from 'lenis'
 import gsap from 'gsap'
@@ -37,7 +36,6 @@ function App() {
 
   return (
     <>
-      <Shutter></Shutter>
       <Nav></Nav>
       <Home></Home>
     </>
