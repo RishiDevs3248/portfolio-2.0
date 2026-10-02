@@ -17,46 +17,108 @@ export default function Home() {
   const expObj = [
     {
       companyName: "Qualitia Software",
-      role: "Junior Software Engineer",
+      role: "Junior Software Developer",
       time: "13 Nov 2025 - Present",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
+      projects: [
+        {
+          projectName: "Salesforce Integration",
+          desc: [
+            "Researched and developed support for Salesforce custom components, including LWC, Aura, and Visualforce, taking the feature from R&D to implementation.",
+            "Worked with Salesforce REST API and Bulk API, using SOQL queries to retrieve and process the required Salesforce data.",
+            "Built parsers for all three component types to extract the required data directly from their source code.",
+            "Optimized the processing logic by reducing time complexity, resulting in a 68.2% average reduction in processing time across the repository."
+          ]
+        },
+        {
+          projectName: "Electron App & Engine",
+          desc: [
+            "Developed a private-key-based login feature for Salesforce to automate authentication and reduce manual multi-factor authentication (MFA) steps during the login process.",
+            "Used Private key to generate JWT token and exchange it with Salesforce for an access token."
+          ]
+        },
+        {
+          projectName: "Web Recorder & Web Object Spy",
+          desc: [
+            "Automated the connection between the web extension and Electron app, eliminating the need for manual connection/setup.",
+            "Implemented logic to detect whether the web extension is installed and automatically establish the connection when available, otherwise notify users about the missing extension and guide them through the installation process."
+          ]
+        }
+      ]
     },
     {
       companyName: "Techspawn Solutions",
       role: "ERP Developer Intern",
-      time: "4 Nov 2024 – 6 Feb 2025",
-      desc: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum."
-    },
-  ]
+      time: "4 Nov 2024 - 6 Feb 2025",
+      projects: [
+        {
+          projectName: "Okio",
+          desc: [
+            "Designed and customized the Odoo website for this project, implementing responsive UI with XML and CSS to enhance user interaction.",
+            "Optimized the website layout and improved navigation for a seamless experience."
+          ]
+        },
+        {
+          projectName: "Escarra",
+          desc: [
+            "Worked on Odoo ERP customization, enhancing module functionalities to streamline business operations.",
+            "Focused on improving system workflows, UI enhancements, and module optimizations."
+          ]
+        }
+      ]
+    }
+  ];
 
   const prjObj = [
     {
-      image: "./images/Porfolio_profile_image.png",
+      image: "./images/prj ref.png",
       prjName: "Prj name",
+      goto: "link",
       description: "description description description description description description",
       skill: ["React.js", "Node.js", "Express.js", "React.js", "Node.js", "Express.js", "React.js", "Node.js", "Express.js"]
     },
     {
-      image: "./images/Porfolio_profile_image.png",
+      image: "./images/prj ref.png",
       prjName: "Prj name",
+      goto: "link",
       description: "description description description description description description",
       skill: ["React.js", "Node.js", "Express.js"]
     },
     {
-      image: "./images/Porfolio_profile_image.png",
+      image: "./images/prj ref.png",
       prjName: "Prj name",
+      goto: "link",
       description: "description description description description description description",
       skill: ["React.js", "Node.js", "Express.js"]
     },
     {
-      image: "./images/Porfolio_profile_image.png",
+      image: "./images/prj ref.png",
       prjName: "Prj name",
+      goto: "link",
       description: "description description description description description description",
       skill: ["React.js", "Node.js", "Express.js"]
     },
   ]
 
-  const skillsList: Array<string> = ["React.js", "Node.js", "Express.js", "React.js", "Node.js", "Express.js", "React.js", "Node.js", "Express.js"];
+  const skillsList: Array<string> = [
+    "React.js",
+    "Express.js",
+    "REST APIs",
+    "Node.js",
+    "Salesforce Integration",
+    "JavaScript",
+    "TypeScript",
+    "Java",
+    "GSAP",
+    "Tailwind CSS",
+    "CSS",
+    "HTML",
+    "MySQL",
+    "MongoDB",
+    "VS Code",
+    "Git",
+    "Postman",
+    "Docker"
+  ];
 
   useGSAP(() => {
     const tl = gsap.timeline();

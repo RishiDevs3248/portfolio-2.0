@@ -3,59 +3,98 @@
     width: 100%;
     max-width: var(--max-width);
     height: fit-content;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+
     margin-bottom: 20px;
+
     border: 1px solid black;
     border-radius: 24px;
+
     break-inside: avoid;
+    box-sizing: border-box;
 }
 
 .prjImage {
     width: 100%;
     height: auto;
+
     border-radius: 16px;
     margin-bottom: 8px;
+
+    display: block;
 }
 
 .prjName {
     font-family: var(--font-main-reg);
     font-size: var(--font-size-company);
     color: var(--heading-text);
+
     margin-bottom: 8px;
+
+    overflow-wrap: anywhere;
 }
 
 .prjDesc {
+    width: 100%;
+
     font-size: var(--font-size-paragraph);
     text-align: justify;
+
     margin-bottom: 8px;
+
     color: var(--paragraph-text);
     line-height: 1.5;
+
+    overflow-wrap: anywhere;
+}
+
+.project-link {
+    display: inline-block;
+
+    margin-bottom: 12px;
+
+    font-family: var(--font-main-reg);
+    font-size: var(--font-size-paragraph);
+
+    color: var(--heading-text);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 .skilssContainer {
+    width: 100%;
+
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
+
     font-family: var(--font-main-reg);
 }
 
 .card_skill {
     padding: 8px;
+
     min-height: 32px;
-    height: auto;
     width: fit-content;
+
     font-size: var(--font-size-paragraph);
+
     border: 1px solid black;
     border-radius: 16px;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-sizing: border-box;
 }
 
 @media screen and (max-width: 600px) {
+
     .prj-card-container {
         margin-bottom: 16px;
         border-radius: 20px;
@@ -69,17 +108,22 @@
         text-align: left;
     }
 
+    .project-link {
+        margin-bottom: 10px;
+    }
+
     .skilssContainer {
         gap: 6px;
     }
 
-    .skill {
+    .card_skill {
         padding: 7px;
         min-height: 30px;
     }
 }
 
 @media screen and (max-width: 400px) {
+
     .prj-card-container {
         padding: 6px;
         margin-bottom: 14px;
@@ -90,11 +134,16 @@
         border-radius: 12px;
     }
 
+    .project-link {
+        padding: 7px 10px;
+        margin-bottom: 8px;
+    }
+
     .skilssContainer {
         gap: 5px;
     }
 
-    .skill {
+    .card_skill {
         padding: 6px;
         min-height: 28px;
     }

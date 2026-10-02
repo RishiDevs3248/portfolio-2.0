@@ -6,16 +6,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
+type Project = {
+    projectName: string;
+    desc: string[];
+};
+
 type ExperienceCardProps = {
-    companyName: string,
-    role: string,
-    time: string,
-    desc: string
-}
+    companyName: string;
+    role: string;
+    time: string;
+    projects: Project[];
+};
 
 export default function ExperienceCard(props: ExperienceCardProps) {
 
-    const { companyName, role, time, desc } = props;
+    const { companyName, role, time, projects } = props;
 
     const cardRef = useRef<HTMLDivElement>(null);
 
@@ -37,24 +42,20 @@ export default function ExperienceCard(props: ExperienceCardProps) {
             end: "top 25%",
 
             onToggle: () => {
-
                 gsap.to(roleElement, {
                     y: 0,
                     opacity: 1,
                     duration: 0.5,
                     ease: "power2.out"
                 });
-
             }
         });
 
     }, { scope: cardRef });
 
     return (
-        <div
-            ref={cardRef}
-            className='exp-card-container'
-        >
+        <div ref={cardRef} className="exp-card-container">
+
             <div className="side-line"></div>
 
             <div className="main-card">
@@ -77,12 +78,28 @@ export default function ExperienceCard(props: ExperienceCardProps) {
 
                 </div>
 
-                <div className="card-desc">
-                    {desc}
+                <div className="card-prj-container">
+                    {projects.map((project) => (
+                        <div className="card-prj" key={project.projectName}>
+
+                            <div className="project-name">
+                                {project.projectName}
+                            </div>
+
+                            <ul>
+                                {project.desc.map((des) => (
+                                    <li className="card-desc" key={des}>
+                                        {des}
+                                    </li>
+                                ))}
+                            </ul>
+
+                        </div>
+                    ))}
                 </div>
 
             </div>
 
         </div>
-    )
+    );
 }

@@ -10,7 +10,8 @@ type projectType = {
     image: string,
     prjName: string,
     description: string,
-    skill: Array<string>
+    skill: Array<string>,
+    goto:string,
 }
 
 export default function ProjectCard(props: projectType) {
@@ -46,6 +47,15 @@ export default function ProjectCard(props: projectType) {
             <div className='prjName'>{props.prjName}</div>
 
             <div className='prjDesc'>{props.description}</div>
+
+            <a
+                className="project-link"
+                href={props.goto}
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                View Project ↗
+            </a>
 
             <div className='skilssContainer'>
                 {props.skill.map((skill, idx) => {
